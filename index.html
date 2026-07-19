@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wordly — Dictionary SPA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Wordly</h1>
+      <p class="tagline">Look up any word, instantly.</p>
+    </header>
+
+    <form id="search-form">
+      <input
+        type="text"
+        id="word-input"
+        placeholder="Type a word..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="loading" class="hidden">Searching...</div>
+    <div id="error-message" class="hidden"></div>
+
+    <div id="result" class="hidden">
+      <div class="word-header">
+        <h2 id="word-title"></h2>
+        <button id="play-audio" class="hidden" title="Play pronunciation">🔊</button>
+      </div>
+      <p id="phonetic"></p>
+
+      <div id="meanings"></div>
+
+      <button id="save-btn">☆ Save Word</button>
+    </div>
+
+    <div id="saved-section">
+      <h3>Saved Words</h3>
+      <ul id="saved-list"></ul>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
