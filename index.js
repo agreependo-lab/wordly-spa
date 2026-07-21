@@ -1,3 +1,4 @@
+
 const searchForm = document.getElementById("search-form");
 const wordInput = document.getElementById("word-input");
 const loading = document.getElementById("loading");
@@ -24,13 +25,13 @@ function hideLoading() {
   loading.classList.add("hidden");
 }
 
-function showError(message) {
+function showEror(message) {
   errorMessage.textContent = message;
   errorMessage.classList.remove("hidden");
   result.classList.add("hidden");
 }
 
-function clearError() {
+function clearEror() {
   errorMessage.classList.add("hidden");
 }
 
@@ -87,7 +88,7 @@ function renderResult(data) {
     meanings.appendChild(block);
   });
 
-  updateSaveButton();
+  updateaveButton();
   result.classList.remove("hidden");
 }
 
@@ -107,7 +108,7 @@ function renderSavedList() {
       wordInput.value = word;
       searchWord(word);
     });
-    savedList.appendChild(li);
+    savedList.appenChild(li);
   });
 }
 
